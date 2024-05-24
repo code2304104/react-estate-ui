@@ -1,0 +1,123 @@
+@import "../responsive.scss";
+
+.searchBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+
+    .type {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            background-color: black; /* Primary color */
+            color: white; /* Text color */
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+
+            &:hover {
+                background-color: white; /* Hover background color */
+                color: black; /* Hover text color */
+                border: 1px solid black; /* Border to maintain button shape */
+            }
+        }
+    }
+
+    form {
+        display: flex;
+        flex-wrap: wrap; /* Make the form elements wrap */
+        justify-content: center; /* Center form elements */
+        align-items: center;
+
+        input {
+            padding: 10px;
+            margin: 5px 10px; /* Adjust margin for spacing */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            flex: 1; /* Allow inputs to grow and shrink */
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px 10px; /* Adjust margin for spacing */
+            border: none;
+            background-color: #fece51; /* Primary color */
+            color: white; /* Text color */
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+
+            &:hover {
+                background-color: #fff9cc; /* Hover background color (pale yellow) */
+                color: white; /* Hover text color */
+                border: 1px solid #fece51; /* Border to maintain button shape */
+            }
+
+            img {
+                width: 20px;
+                height: 20px;
+                filter: invert(100%); /* Ensure the PNG is white */
+                transition: filter 0.3s;
+            }
+
+            &:hover img {
+                filter: invert(100%); /* Ensure the PNG remains white on hover */
+            }
+        }
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+        .type {
+            flex-direction: column;
+
+            button {
+                width: 100%;
+                margin-bottom: 10px;
+                padding: 10px;
+            }
+        }
+
+        form {
+            flex-direction: column;
+
+            input,
+            button {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .type {
+            button {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+
+        form {
+            input {
+                padding: 8px;
+                font-size: 14px;
+            }
+
+            button {
+                padding: 8px;
+                font-size: 14px;
+            }
+
+            img {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}

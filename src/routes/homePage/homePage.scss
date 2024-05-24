@@ -1,0 +1,116 @@
+@import "../../responsive.scss";
+
+.homePage {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+
+    .textContainer {
+        flex: 3;
+
+        .wrapper {
+            padding-right: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 50px;
+            height: 100%;
+
+            .title {
+                font-size: 64px;
+
+                @include md {
+                    font-size: 48px;
+                    text-align: center;
+                }
+
+                @include sm {
+                    font-size: 32px;
+                    text-align: center;
+                }
+            }
+
+            .boxes {
+                display: flex;
+                justify-content: space-between;
+
+                h1 {
+                    font-size: 36px;
+
+                    @include md {
+                        font-size: 28px;
+                        text-align: center;
+                    }
+
+                    @include sm {
+                        font-size: 24px;
+                        text-align: center;
+                    }
+                }
+
+                h2 {
+                    font-size: 20px;
+                    font-weight: 300;
+
+                    @include md {
+                        font-size: 18px;
+                        text-align: center;
+                    }
+
+                    @include sm {
+                        font-size: 16px;
+                        text-align: center;
+                    }
+                }
+
+                @include md {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 20px;
+                }
+
+                @include sm {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 15px;
+                }
+            }
+        }
+    }
+
+    .imgContainer {
+        flex: 2;
+        background-color: #fcf5f3;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        @include md {
+            display: none;
+        }
+
+        img {
+            width: 115%;
+            position: absolute;
+            right: 0;
+
+            @include md {
+                width: 100%;
+            }
+
+            @include sm {
+                width: 100%;
+            }
+        }
+    }
+
+    @include md {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @include sm {
+        flex-direction: column;
+        align-items: center;
+    }
+}
