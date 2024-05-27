@@ -1,0 +1,66 @@
+.filter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h1 {
+        font-weight: 300;
+        font-size: 24px; // Corrected from font-style to font-size
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+
+        label {
+            font-size: 20px; // Corrected from font-style to font-size
+        }
+
+        input, select {
+            width: 100px;
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    }
+
+    .top {
+        input {
+            width: 100%;
+        }
+    }
+
+    .bottom {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+
+        .item {
+            flex: 1;
+            min-width: 100px; // Ensures items have a minimum width
+        }
+
+        button {
+            width: 100px;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            background-color: #fece51; // Primary color
+            border-radius: 5px;
+            transition: background-color 0.3s;
+
+            img {
+                width: 24px;
+                height: 24px;
+                filter: invert(100%); // Ensure the PNG is white
+            }
+
+            &:hover {
+                background-color: #fff9cc; // Hover background color (pale yellow)
+            }
+        }
+    }
+}

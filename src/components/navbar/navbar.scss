@@ -1,22 +1,22 @@
 @import "../../responsive.scss";
 
-nav{
+nav {
     height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
 
-    a{
+    a {
         transition: all 0.4s ease;
 
-        @include sm{
+        @include sm {
             display: none;
         }
 
         &:hover {
-            scale: 1.05;
+            transform: scale(1.05);
         }
-
     }
 
     .left {
@@ -32,22 +32,21 @@ nav{
             align-items: center;
             gap: 10px;
 
-            img{
-                width: 28px;
+            img {
+                height: 28px;  /* Set height for the image */
+                width: auto;   /* Maintain aspect ratio */
             }
 
-            span{
-
-                @include md{
+            span {
+                @include md {
                     display: none;
                 }
 
-                @include sm{
+                @include sm {
                     display: initial;
                 }
             }
         }
-        
     }
 
     .right {
@@ -58,11 +57,11 @@ nav{
         background-color: #fcf5f3;
         height: 100%;
 
-        @include md{
+        @include md {
             background-color: transparent;
         }
 
-        a{
+        a {
             padding: 12px 24px;
             margin: 20px;
         }
@@ -71,26 +70,23 @@ nav{
             background-color: #fece51;
         }
 
-        .menuIcon{
+        .menuIcon {
             display: none;
             z-index: 999;
 
-            img{
+            img {
                 width: 36px;
                 height: 36px;
                 cursor: pointer;
-
-
             }
 
             @include sm {
                 display: inline;
             }
-
         }
 
-        .menu{
-            position:absolute;
+        .menu {
+            position: absolute;
             top: 0;
             right: -50%;
             background-color: black;
@@ -104,17 +100,15 @@ nav{
             justify-content: center;
             font-size: 24px;
 
-            &.active{
+            &.active {
                 right: 0;
             }
 
-            @include sm{
-                a{
+            @include sm {
+                a {
                     display: initial;
                 }
             }
-
-        
         }
     }
 }
