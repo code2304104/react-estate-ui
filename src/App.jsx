@@ -6,36 +6,36 @@ import {
 import ListPage from "./routes/listPage/listPage";
 import Layout from "./routes/layout/layout";
 import SinglePage from "./routes/singlePage/singlePage";
-
+import ProfilePage from "./routes/ProfilePage/profilePage";
 
 function App() {
-
   const router = createBrowserRouter([
     {
       path: "/",
-      element: 
-       <Layout />,
-       children:[
+      element: <Layout />,
+      children: [
         {
-          path:"/",
-          element:<HomePage/>
+          path: "/",
+          element: <HomePage />
         },
         {
-          path:"/list",
-          element:<ListPage/>
+          path: "/list",
+          element: <ListPage />
         },
         {
-          path:"/id",
-          element:<SinglePage/>
+          path: "/profile",
+          element: <ProfilePage />
+        },
+        {
+          path: "/:id",
+          element: <SinglePage />
         }
-       ]
+      ]
     }
-    
   ]);
 
   return (
-    
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   );
 }
 
